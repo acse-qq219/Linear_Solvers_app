@@ -1,0 +1,115 @@
+A linear solver project for solving linear equations (like Ax = b) provided by users.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Getting Started}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Dependencies\+: At least C++ M\+S\+VC 2017
+\item Download\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Create a directory
+\end{DoxyEnumerate}
+
+\`{}\`{}\`{} mkdir linear-\/solver \`{}\`{}\`{}\`{}
+
+
+\begin{DoxyEnumerate}
+\item Enter this directory
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd linear-\/solver}
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Clone this repository
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/acse-\/2019/acse-\/5-\/assignment-\/acse-\/5-\/team-\/for-\/juejue.git}
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Deployment\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Open your M\+S\+VC and open this local folder
+\item Double-\/click the {\ttfamily linear\+\_\+solver.\+sln} in your Solution Explorer {\ttfamily Ctrl + Alt + L}
+\item Build the solution {\ttfamily Ctrl + Alt + F7}
+\item Run {\ttfamily Ctrl + F5}
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{User Guidance}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item The main process looks like\+: Introducton -\/$>$ Select Input Data Source -\/$>$ Select Solevr -\/$>$ Select Output
+\item Users may select to generate a specified size matrix with random number between wanted minimum and maximum value or read data from a {\ttfamily .txt} file. Note that if users want to {\bfseries{solve the linear system through sparsely stored matrix}}, they have to read data source from a external file
+\item The default input data file is stored in {\ttfamily linear-\/solver\textbackslash{}acse-\/5-\/assignment-\/acse-\/5-\/team-\/for-\/juejue\textbackslash{}linear\+\_\+solvers\textbackslash{}data} as \href{linear_solvers/data/input.txt}{\texttt{ input.\+txt}}. The default format of {\ttfamily input.\+txt} is\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{First line: Description/Source/Reference/Author/etc.}
+\DoxyCodeLine{Second line: 10 10      (rows and columns the matrix owns)}
+\DoxyCodeLine{Third line: data data data data data data data data data data (data of the matrix)}
+\DoxyCodeLine{                             .}
+\DoxyCodeLine{                             .}
+\DoxyCodeLine{                             .}
+\DoxyCodeLine{13th line: data data data data data data data data data data (data of the vector)}
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Users can select their own data file as data source but the data format {\bfseries{M\+U\+ST BE T\+HE S\+A\+ME AS A\+B\+O\+VE}}. You may find an example file called \href{linear_solvers/data/input.txt}{\texttt{ input.\+txt}} in {\ttfamily \textbackslash{}data} folder
+\item Users can select four linear solvers to solve the linear system\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Iterative Jacobi Method -- Users need to input iteration times, initial guess for all solutions and wanted precision
+\item Iterative Gauss-\/\+Seidel Method -- Users need to input iteration times, initial guess for all solutions and wanted precision
+\item Direct Gaussian Elimination Method -- No need for extra input
+\item Direct LU Decomposition -- No need for extra input
+\item Iterative S\+OR Method -- Users need to input iteration times, initial guess for all solutions and wanted precision
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Users can select three output\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Print all solutions as x vector with wanted precision and solver running time. Note that if no solution or the solution cannot meet precision requirement, the system will not output the result, but users can still choose to output results to a {\ttfamily .txt} file (default \href{linear_solvers/data/output.txt}{\texttt{ output.\+txt}} in {\ttfamily \textbackslash{}data} folder). Moreover, the system may show 0 ms sometimes. This is due to small size of the matrix (usually smaller than 50 x 50).
+\item Output all data to a txt file. Users can save the output data file (default in {\ttfamily \textbackslash{}data} folder).
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item An example of format of {\ttfamily output.\+txt} is\+: (10 x 10 matrix)
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{First line: matrix A (string)}
+\DoxyCodeLine{Second line: data data data data data data data data data data (data of the matrix)}
+\DoxyCodeLine{                             .}
+\DoxyCodeLine{                             .}
+\DoxyCodeLine{                             .}
+\DoxyCodeLine{13th line: vector b (string)}
+\DoxyCodeLine{14th line: data data data data data data data data data data (data of the vector b)}
+\DoxyCodeLine{15th line: (whitespace)}
+\DoxyCodeLine{16th line: solution (string)}
+\DoxyCodeLine{17th line: data data data data data data data data data data (data of the vector x)}
+\DoxyCodeLine{18th line: (whitespace)}
+\DoxyCodeLine{19th line: end in data-\/th iteration}
+\DoxyCodeLine{20th line: (whitespace)}
+\DoxyCodeLine{21th line: running time: data ms}
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Authors}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Qiuchen Qian -- Interface, D\+E\+S\+Matrix, Jacobi and Gauss-\/\+Seidel Solver
+\item Yusen Zhou -- C\+S\+R\+Matrix and Intergation
+\item He Zhu -- Readfile (Interface), Gauss Elimination, LU Decomposition and S\+OR solver
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{License}\label{md__r_e_a_d_m_e_autotoc_md4}
+This project is licensed under the M\+IT License -- see the \mbox{[}L\+I\+C\+E\+N\+S\+E.\+md\mbox{]}(L\+I\+C\+E\+N\+SE) file for details\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Acknowledgements}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Jue\+Jue 
+\end{DoxyItemize}

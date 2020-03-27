@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Linear-Solver-System</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>linear<sp/>solver<sp/>project<sp/>for<sp/>solving<sp/>linear<sp/>equations<sp/>(like<sp/>Ax<sp/>=<sp/>b)<sp/>provided<sp/>by<sp/>users.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Dependencies:<sp/><sp/>At<sp/>least<sp/>C++<sp/>MSVC<sp/>2017</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Download:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Create<sp/>a<sp/>directory</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>mkdir<sp/>linear-solver</highlight></codeline>
+<codeline><highlight class="normal">````</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>Enter<sp/>this<sp/>directory</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cd<sp/>linear-solver</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>Clone<sp/>this<sp/>repository</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>git<sp/>clone<sp/>https://github.com/acse-2019/acse-5-assignment-acse-5-team-for-juejue.git</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Deployment:<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Open<sp/>your<sp/>MSVC<sp/>and<sp/>open<sp/>this<sp/>local<sp/>folder</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Double-click<sp/>the<sp/>`linear_solver.sln`<sp/>in<sp/>your<sp/>Solution<sp/>Explorer<sp/>`Ctrl<sp/>+<sp/>Alt<sp/>+<sp/>L`</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Build<sp/>the<sp/>solution<sp/>`Ctrl<sp/>+<sp/>Alt<sp/>+<sp/>F7`</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Run<sp/>`Ctrl<sp/>+<sp/>F5`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>User<sp/>Guidance</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>main<sp/>process<sp/>looks<sp/>like:<sp/>Introducton<sp/>-&gt;<sp/>Select<sp/>Input<sp/>Data<sp/>Source<sp/>-&gt;<sp/>Select<sp/>Solevr<sp/>-&gt;<sp/>Select<sp/>Output</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Users<sp/>may<sp/>select<sp/>to<sp/>generate<sp/>a<sp/>specified<sp/>size<sp/>matrix<sp/>with<sp/>random<sp/>number<sp/>between<sp/>wanted<sp/>minimum<sp/>and<sp/>maximum<sp/>value</highlight></codeline>
+<codeline><highlight class="normal">or<sp/>read<sp/>data<sp/>from<sp/>a<sp/>`.txt`<sp/>file.<sp/>Note<sp/>that<sp/>if<sp/>users<sp/>want<sp/>to<sp/>**solve<sp/>the<sp/>linear<sp/>system<sp/>through<sp/>sparsely<sp/>stored<sp/>matrix**,<sp/>they</highlight></codeline>
+<codeline><highlight class="normal">have<sp/>to<sp/>read<sp/>data<sp/>source<sp/>from<sp/>a<sp/>external<sp/>file<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>default<sp/>input<sp/>data<sp/>file<sp/>is<sp/>stored<sp/>in<sp/>`linear-solver\acse-5-assignment-acse-5-team-for-juejue\linear_solvers\data`</highlight></codeline>
+<codeline><highlight class="normal">as<sp/>[input.txt](linear_solvers/data/input.txt).<sp/>The<sp/>default<sp/>format<sp/>of<sp/>`input.txt`<sp/>is:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>First<sp/>line:<sp/>Description/Source/Reference/Author/etc.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>Second<sp/>line:<sp/>10<sp/>10<sp/><sp/><sp/><sp/><sp/><sp/>(rows<sp/>and<sp/>columns<sp/>the<sp/>matrix<sp/>owns)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>Third<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>matrix)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>13th<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>vector)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Users<sp/>can<sp/>select<sp/>their<sp/>own<sp/>data<sp/>file<sp/>as<sp/>data<sp/>source<sp/>but<sp/>the<sp/>data<sp/>format<sp/>**MUST<sp/>BE<sp/>THE<sp/>SAME<sp/>AS<sp/>ABOVE**.<sp/>You<sp/>may<sp/>find<sp/>an<sp/>example<sp/>file<sp/>called<sp/>[input.txt](linear_solvers/data/input.txt)<sp/>in<sp/>`\data`<sp/>folder</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Users<sp/>can<sp/>select<sp/>four<sp/>linear<sp/>solvers<sp/>to<sp/>solve<sp/>the<sp/>linear<sp/>system:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Iterative<sp/>Jacobi<sp/>Method<sp/>--<sp/>Users<sp/>need<sp/>to<sp/>input<sp/>iteration<sp/>times,<sp/>initial<sp/>guess<sp/>for<sp/>all<sp/>solutions<sp/>and<sp/>wanted<sp/>precision</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Iterative<sp/>Gauss-Seidel<sp/>Method<sp/>--<sp/>Users<sp/>need<sp/>to<sp/>input<sp/>iteration<sp/>times,<sp/>initial<sp/>guess<sp/>for<sp/>all<sp/>solutions<sp/>and<sp/>wanted<sp/>precision</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Direct<sp/>Gaussian<sp/>Elimination<sp/>Method<sp/>--<sp/>No<sp/>need<sp/>for<sp/>extra<sp/>input</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Direct<sp/>LU<sp/>Decomposition<sp/>--<sp/>No<sp/>need<sp/>for<sp/>extra<sp/>input</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Iterative<sp/>SOR<sp/>Method<sp/>--<sp/>Users<sp/>need<sp/>to<sp/>input<sp/>iteration<sp/>times,<sp/>initial<sp/>guess<sp/>for<sp/>all<sp/>solutions<sp/>and<sp/>wanted<sp/>precision</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Users<sp/>can<sp/>select<sp/>three<sp/>output:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Print<sp/>all<sp/>solutions<sp/>as<sp/>x<sp/>vector<sp/>with<sp/>wanted<sp/>precision<sp/>and<sp/>solver<sp/>running<sp/>time.<sp/>Note<sp/>that<sp/>if<sp/>no<sp/>solution<sp/>or<sp/>the<sp/>solution<sp/>cannot<sp/>meet<sp/>precision<sp/>requirement,<sp/>the<sp/>system<sp/>will<sp/>not<sp/>output<sp/>the<sp/>result,<sp/>but<sp/>users<sp/>can<sp/>still<sp/>choose<sp/>to<sp/>output<sp/>results<sp/>to<sp/>a<sp/>`.txt`<sp/>file<sp/>(default<sp/>[output.txt](linear_solvers/data/output.txt)<sp/>in<sp/>`\data`<sp/>folder).<sp/>Moreover,<sp/>the<sp/>system<sp/>may<sp/>show<sp/>0<sp/>ms<sp/>sometimes.<sp/>This<sp/>is<sp/>due<sp/>to<sp/>small<sp/>size<sp/>of<sp/>the<sp/>matrix<sp/>(usually<sp/>smaller<sp/>than<sp/>50<sp/>x<sp/>50).</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Output<sp/>all<sp/>data<sp/>to<sp/>a<sp/>txt<sp/>file.<sp/>Users<sp/>can<sp/>save<sp/>the<sp/>output<sp/>data<sp/>file<sp/>(default<sp/>in<sp/>`\data`<sp/>folder).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>An<sp/>example<sp/>of<sp/>format<sp/>of<sp/>`output.txt`<sp/>is:<sp/>(10<sp/>x<sp/>10<sp/>matrix)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>First<sp/>line:<sp/>matrix<sp/>A<sp/>(string)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>Second<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>matrix)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>13th<sp/>line:<sp/>vector<sp/>b<sp/>(string)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>14th<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>vector<sp/>b)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>15th<sp/>line:<sp/>(whitespace)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>16th<sp/>line:<sp/>solution<sp/>(string)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>17th<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>vector<sp/>x)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>18th<sp/>line:<sp/>(whitespace)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>19th<sp/>line:<sp/>end<sp/>in<sp/>data-th<sp/>iteration</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>20th<sp/>line:<sp/>(whitespace)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>21th<sp/>line:<sp/>running<sp/>time:<sp/>data<sp/>ms</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Authors</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Qiuchen<sp/>Qian<sp/>--<sp/>Interface,<sp/>DESMatrix,<sp/>Jacobi<sp/>and<sp/>Gauss-Seidel<sp/>Solver</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Yusen<sp/>Zhou<sp/>--<sp/>CSRMatrix<sp/>and<sp/>Intergation</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>He<sp/>Zhu<sp/>--<sp/>Readfile<sp/>(Interface),<sp/>Gauss<sp/>Elimination,<sp/>LU<sp/>Decomposition<sp/>and<sp/>SOR<sp/>solver</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>project<sp/>is<sp/>licensed<sp/>under<sp/>the<sp/>MIT<sp/>License<sp/>--<sp/>see<sp/>the<sp/>[LICENSE.md](LICENSE)<sp/>file<sp/>for<sp/>details</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Acknowledgements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>JueJue</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

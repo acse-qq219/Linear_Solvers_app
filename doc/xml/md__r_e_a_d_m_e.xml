@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>Linear-Solver-System</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A linear solver project for solving linear equations (like Ax = b) provided by users.</para>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md1">
+<title>Getting Started</title>
+<para><itemizedlist>
+<listitem><para>Dependencies: At least C++ MSVC 2017</para>
+</listitem><listitem><para>Download:</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Create a directory</para>
+</listitem></orderedlist>
+</para>
+<para>``` mkdir linear-solver ````</para>
+<para><orderedlist>
+<listitem><para>Enter this directory</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal">cd<sp/>linear-solver</highlight></codeline>
+</programlisting></para>
+<para><orderedlist>
+<listitem><para>Clone this repository</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/acse-2019/acse-5-assignment-acse-5-team-for-juejue.git</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>Deployment:</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Open your MSVC and open this local folder</para>
+</listitem><listitem><para>Double-click the <computeroutput>linear_solver.sln</computeroutput> in your Solution Explorer <computeroutput>Ctrl + Alt + L</computeroutput></para>
+</listitem><listitem><para>Build the solution <computeroutput>Ctrl + Alt + F7</computeroutput></para>
+</listitem><listitem><para>Run <computeroutput>Ctrl + F5</computeroutput></para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md2">
+<title>User Guidance</title>
+<para><itemizedlist>
+<listitem><para>The main process looks like: Introducton -&gt; Select Input Data Source -&gt; Select Solevr -&gt; Select Output</para>
+</listitem><listitem><para>Users may select to generate a specified size matrix with random number between wanted minimum and maximum value or read data from a <computeroutput>.txt</computeroutput> file. Note that if users want to <bold>solve the linear system through sparsely stored matrix</bold>, they have to read data source from a external file</para>
+</listitem><listitem><para>The default input data file is stored in <computeroutput>linear-solver\acse-5-assignment-acse-5-team-for-juejue\linear_solvers\data</computeroutput> as <ulink url="linear_solvers/data/input.txt">input.txt</ulink>. The default format of <computeroutput>input.txt</computeroutput> is:</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal">First<sp/>line:<sp/>Description/Source/Reference/Author/etc.</highlight></codeline>
+<codeline><highlight class="normal">Second<sp/>line:<sp/>10<sp/>10<sp/><sp/><sp/><sp/><sp/><sp/>(rows<sp/>and<sp/>columns<sp/>the<sp/>matrix<sp/>owns)</highlight></codeline>
+<codeline><highlight class="normal">Third<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>matrix)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal">13th<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>vector)</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>Users can select their own data file as data source but the data format <bold>MUST BE THE SAME AS ABOVE</bold>. You may find an example file called <ulink url="linear_solvers/data/input.txt">input.txt</ulink> in <computeroutput>\data</computeroutput> folder</para>
+</listitem><listitem><para>Users can select four linear solvers to solve the linear system:</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Iterative Jacobi Method <ndash/> Users need to input iteration times, initial guess for all solutions and wanted precision</para>
+</listitem><listitem><para>Iterative Gauss-Seidel Method <ndash/> Users need to input iteration times, initial guess for all solutions and wanted precision</para>
+</listitem><listitem><para>Direct Gaussian Elimination Method <ndash/> No need for extra input</para>
+</listitem><listitem><para>Direct LU Decomposition <ndash/> No need for extra input</para>
+</listitem><listitem><para>Iterative SOR Method <ndash/> Users need to input iteration times, initial guess for all solutions and wanted precision</para>
+</listitem></orderedlist>
+<itemizedlist>
+<listitem><para>Users can select three output:</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Print all solutions as x vector with wanted precision and solver running time. Note that if no solution or the solution cannot meet precision requirement, the system will not output the result, but users can still choose to output results to a <computeroutput>.txt</computeroutput> file (default <ulink url="linear_solvers/data/output.txt">output.txt</ulink> in <computeroutput>\data</computeroutput> folder). Moreover, the system may show 0 ms sometimes. This is due to small size of the matrix (usually smaller than 50 x 50).</para>
+</listitem><listitem><para>Output all data to a txt file. Users can save the output data file (default in <computeroutput>\data</computeroutput> folder).</para>
+</listitem></orderedlist>
+<itemizedlist>
+<listitem><para>An example of format of <computeroutput>output.txt</computeroutput> is: (10 x 10 matrix)</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting><codeline><highlight class="normal">First<sp/>line:<sp/>matrix<sp/>A<sp/>(string)</highlight></codeline>
+<codeline><highlight class="normal">Second<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>matrix)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight></codeline>
+<codeline><highlight class="normal">13th<sp/>line:<sp/>vector<sp/>b<sp/>(string)</highlight></codeline>
+<codeline><highlight class="normal">14th<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>vector<sp/>b)</highlight></codeline>
+<codeline><highlight class="normal">15th<sp/>line:<sp/>(whitespace)</highlight></codeline>
+<codeline><highlight class="normal">16th<sp/>line:<sp/>solution<sp/>(string)</highlight></codeline>
+<codeline><highlight class="normal">17th<sp/>line:<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>data<sp/>(data<sp/>of<sp/>the<sp/>vector<sp/>x)</highlight></codeline>
+<codeline><highlight class="normal">18th<sp/>line:<sp/>(whitespace)</highlight></codeline>
+<codeline><highlight class="normal">19th<sp/>line:<sp/>end<sp/>in<sp/>data-th<sp/>iteration</highlight></codeline>
+<codeline><highlight class="normal">20th<sp/>line:<sp/>(whitespace)</highlight></codeline>
+<codeline><highlight class="normal">21th<sp/>line:<sp/>running<sp/>time:<sp/>data<sp/>ms</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md3">
+<title>Authors</title>
+<para><itemizedlist>
+<listitem><para>Qiuchen Qian <ndash/> Interface, DESMatrix, Jacobi and Gauss-Seidel Solver</para>
+</listitem><listitem><para>Yusen Zhou <ndash/> CSRMatrix and Intergation</para>
+</listitem><listitem><para>He Zhu <ndash/> Readfile (Interface), Gauss Elimination, LU Decomposition and SOR solver</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md4">
+<title>License</title>
+<para>This project is licensed under the MIT License <ndash/> see the [LICENSE.md](LICENSE) file for details</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md5">
+<title>Acknowledgements</title>
+<para><itemizedlist>
+<listitem><para>JueJue </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
